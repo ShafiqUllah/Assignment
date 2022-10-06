@@ -1,0 +1,3 @@
+As PersonWithJob is a person, we can downcast PersonWithJob as a person and store it in Person reference.
+As we compare personwithjob with person, it return false.
+As we compare person with PersonWithJob, it returns true, as personwithJob is a person. and it only compare name.  
