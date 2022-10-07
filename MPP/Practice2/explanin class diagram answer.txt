@@ -1,0 +1,19 @@
+1.	Relationship: Dependency
+	Direction: Unidirectional
+	Multiplicity: not specified
+	Instance: one instance of dependent class to call the method of dependent class. 
+	As by definition, dependent class can't have any instance of calling class. 
+	
+2. 	Relationship: Association
+	Direction: Unidirectional
+	Multiplicity: one to one
+	Instance: one instance only on both classes. 
+	We can design our system as if one instance will be created when the constructor method executed on both classes. 
+	And the constructor will be package level access. We can also design as a factory class which will create out desire class object 
+	maintaining one to one relationship.
+	
+3.	Relationship: Inheritance
+	Direction: Unidirectional
+	Multiplicity: not specified
+	Instance: Abstract class can't have instance. Only subclass or child class can have instance or object.
+	
