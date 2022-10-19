@@ -1,0 +1,43 @@
+Lab 8
+1. a. i) 
+parameter - empty
+free variable- s, t
+Local variable- products, i, j
+
+1. a. ii) 
+parameter - s, t
+free variable- ignoreCase
+Local variable- empty
+
+1. b) 
+public class Main {
+	public static void main(String[] args) {
+	
+		Supplier<Double> supplierOfRandomNumber = () -> (double)Math.random();
+		System.out.println(supplierOfRandomNumber.randomNumber());
+	}
+
+	public interface Supplier <T> {
+		T randomNumber();
+	}
+}
+
+2. A) If two Employee objects have the same name, the return value of compare would be 0. This compare method only compare name, which is wrong.
+For Example Employee joe1 = new Employee("Joe", 150000);
+			Employee joe2 = new Employee("Joe", 100000);
+both has same name but have different salary amount. so it can't be same employee.
+
+We need to compare both parameter to decide if it equals or not. we can rewrite the class by following
+
+public class EmployeeComparator implements Comparator<Employee> {
+	@Override
+	public int compare(Employee e1, Employee e2) {
+		if (e1.salary != e2.salary)
+			return e1.salary - e2.salary;
+		return e1.name.compareTo(e2.name);
+	}
+}
+
+
+
+
