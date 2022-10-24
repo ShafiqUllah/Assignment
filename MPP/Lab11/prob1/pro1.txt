@@ -1,0 +1,8 @@
+1
+    a. List<Number> nums = ints;  This causes compiler error as List<Integer>
+       can't be converted into List<Number>;.
+
+    b. nums.add(3.14);  This causes compiler error as extending Generics can't be used
+       to assign values as the compiler can't determine the type of 3.14 when added to nums.
+       It could be any class that is a subclass of Number.
+
